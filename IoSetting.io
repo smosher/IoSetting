@@ -6,7 +6,6 @@ IoSetting := Object clone do(
 		ListLiteral
 		MapLiteral)
 	importExperimental := method(
-		SelectMap
 		Mapping)
 	importAll := method(
 		self importStd
