@@ -90,7 +90,10 @@ Pretty-printers are will use ```prettyPrint``` on each value if it has the slot,
 	/* yields:
 		"Map {
 			[c, List [
-				1, 2, 3, 4  ]],
+				1, 
+				2, 
+				3, 
+				4  ]],
 			[a, Map {
 					[b, 10]  }]  }"
 	*/
