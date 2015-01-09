@@ -60,7 +60,7 @@ Have you ever wanted to succinctly map select values of a ```List``` or ```Map``
 There are two other methods, ```selectMapDeep``` which does a deep-mapping (down to non- ```Map```/```List``` elements), and ```selectMapShallow```, which doesn't dispatch the ```map``` method at all, just the conditional. Example:
 
 	list(list(1,2,3), 1, 2) selectMapDeep(1, 7)
-	// yields list(list(1, 2, 3), 1, 2)
+	// yields list(list(7, 2, 3), 7, 2)
 	
 	list(1,2,3) selectMapShallow(list(1,2,3), "a")
 	// yields "a"
