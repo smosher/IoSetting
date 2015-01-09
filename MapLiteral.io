@@ -2,7 +2,6 @@ FatArrow := Object clone do(
 	squareBrackets := method(
 		k := call argAt(0) name
 		v := call evalArgAt(1)
-			// ^^ was: call argAt(1) asMessageWithEvaluatedArgs
 		list(k,v)
 	)
 )
