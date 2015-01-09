@@ -63,3 +63,22 @@ Using ```SelectMap``` might be inefficient if you have a lot of elements to map.
 
 **TODO:** implement ```mapping``` for ```Map```s.
 
+# Other
+
+## Pretty-printers for Literals
+
+The DSLs for literals include a ```prettyPrint``` function for emitting a homoiconic pretty-printed string of the value in the DSL form. Examples:
+
+	Map { [ one, 2 ] } prettyPrint
+	// yields:
+	// "Map {
+	//	    [one, 2]  }"
+
+	List [ 1,2,3,4 ]
+	// yeilds:
+	//	List [
+			1,
+			2,
+			3,
+			4  ]
+
