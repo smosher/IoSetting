@@ -4,7 +4,7 @@ ListLiteral := Object clone do(
 	prettyPrint := method(
 		head := "List [\n"
 		foot := "  ]\n"
-		inner := self map(x asString) join(",\n")
+		inner := self map(asString) join(",\n")
 		head .. inner .. foot)
 )
 
