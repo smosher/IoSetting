@@ -1,17 +1,17 @@
 FatArrow := Object clone do(
 	squareBrackets := method(
 		k := call argAt(0) name
-		v := call argAt(1) asMessageWithEvaluatedArgs
+		v := call evalArgAt(1)
+			// ^^ was: call argAt(1) asMessageWithEvaluatedArgs
 		list(k,v)
 	)
 )
 
 MapLiteral := Object clone do(
 	curlyBrackets := method(
-		env := call sender clone
 		x := Map clone
 		call message arguments map(arg,
-			arg doInContext(FatArrow)) \
+			arg doInContext(FatArrow, call sender)) \
 			foreach(p,
 				x atPut(p first, p second)))
 
@@ -19,7 +19,10 @@ MapLiteral := Object clone do(
 		head := "Map {\n"
 		foot := "  }\n"
 		inner := self map(k,v,
-			"\t[#{k}, #{v}]" interpolate) join(",\n")
+			vprime := if(v hasSlot("prettyPrint"),
+				v prettyPrint split("\n") join("\n\t"),
+				v asString)
+			"\t[#{k}, #{vprime}]" interpolate) join(",\n")
 		head .. inner .. foot)
 )
 
