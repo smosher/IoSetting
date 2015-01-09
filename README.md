@@ -52,18 +52,7 @@ This proto is like ```ListLiteral``` above as applied to the ```Map``` type. Exa
 
 ### ```SelectMap```
 
-Have you ever wanted to succinctly map select values of a ```List``` or ```Map``` to some other values? ```SelectMap``` is for you. Example:
-
-	List [ 0, 0, 1, 2, 3 ] selectMap(0, 1)
-	// yields list(1,1,1,2,3)
-
-There are two other methods, ```selectMapDeep``` which does a deep-mapping (down to non- ```Map```/```List``` elements), and ```selectMapShallow```, which doesn't dispatch the ```map``` method at all, just the conditional. Example:
-
-	list(list(1,2,3), 1, 2) selectMapDeep(1, 7)
-	// yields list(list(7, 2, 3), 7, 2)
-	
-	list(1,2,3) selectMapShallow(list(1,2,3), "a")
-	// yields "a"
+Currently broken. Do not use.
 
 ### ```Mapping```
 
