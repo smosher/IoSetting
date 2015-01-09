@@ -70,25 +70,28 @@ Using ```SelectMap``` might be inefficient if you have a lot of elements to map.
 The DSLs for literals include a ```prettyPrint``` function for emitting a homoiconic pretty-printed string of the value in the DSL form. Examples:
 
 	Map { [ one, 2 ] } prettyPrint
-	// yields:
-	// "Map {
-	//	    [one, 2]  }"
+	/* yields:
+		"Map {
+			[one, 2]  }"
+	*/
 
 	List [ 1,2,3,4 ] prettyPrint
-	// yeilds:
-	// "List [
+	/* yeilds:
+		"List [
 			1,
 			2,
 			3,
-			4  ]"
+			4  ]" 
+	*/
 
 Pretty-printers are will use ```prettyPrint``` on each value if it has the slot, and also make an attept at keeping indentation consistent.
 
 	Map { [a, Map {[b,10]} ], [c, List [1,2,3,4]] } prettyPrint
-	// yields:
-	// "Map {
-	//	[c, List [
-	//		1, 2, 3, 4  ]],
-	//		[a, Map {
-	//			[b, 10]  }]  }"
+	/* yields:
+		"Map {
+			[c, List [
+				1, 2, 3, 4  ]],
+			[a, Map {
+					[b, 10]  }]  }"
+	*/
 
