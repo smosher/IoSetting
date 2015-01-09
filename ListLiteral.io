@@ -7,7 +7,7 @@ ListLiteral := Object clone do(
 		inner := self map(x, 
 			"\t" .. (
 				if(x hasSlot("prettyPrint"),
-					x prettyPrint,
+					x prettyPrint split("\n") join("\n\t"),
 					x asString))) join(",\n")
 		head .. inner .. foot)
 )
