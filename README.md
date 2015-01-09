@@ -56,7 +56,10 @@ Currently broken. Do not use.
 
 ### ```Mapping```
 
-Using ```SelectMap``` might be inefficient if you have a lot of elements to map. I am not sure if this is really true, but I thought this would be a fun challenge. ```Mapping``` augments ```List``` with a method for construting arbitrarily large mappings that are applied element by element without the need to dispatch map several times.
+Using ```SelectMap``` might be inefficient if you have a lot of elements to map. I am not sure if this is really true, but I thought this would be a fun challenge. ```Mapping``` augments ```List``` with a method for construting arbitrarily large mappings that are applied element by element without the need to dispatch map several times. Example:
+
+	List [ 1, 2, 3, 4 ] mapping( [1,2], [4,2] )
+	// yields list(2,2,3,2)
 
 **TODO:** implement ```mapping``` for ```Map```s.
 
