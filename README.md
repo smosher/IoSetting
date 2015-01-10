@@ -6,10 +6,6 @@ For simplicity, add an alias to your .bashrc:
 
 	alias iosetting='io -i <path-to-IoSetting.io>'
 
-Or override the "io" command:
-
-	alias io='/usr/local/bin/io -i <path-to-IoSetting.io>'
-
 # Usage
 
 By default IoSetting doesn't do much execpt to implicitly add its containing folder to the importer pathm, which will allow you to load the modules simply by referencing them.
